@@ -1,0 +1,77 @@
+/* Full-page setup */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;  /* horizontal center */
+    align-items: center;      /* vertical center */
+    position: relative;       /* for absolute children */
+    font-family: Arial, sans-serif;
+
+    /* Background image for the page */
+    background-image: url('shop.jpg'); /* replace with your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Main centered div - NO background, just text and button */
+.main {
+    text-align: center;
+}
+
+/* Welcome text */
+.main h1 {
+    color: #fff; /* white text */
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+/* Get In button - transparent with white text and border */
+.btn {
+    background: transparent;
+    color: #fff;
+    padding: 12px 25px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Top-right photo button */
+.photo-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #fff;  /* white border */
+    border-radius: 50%;
+    cursor: pointer;
+
+    /* Replace with your actual photo */
+    background: url('web.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    .main h1 {
+        font-size: 28px;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    .photo-btn {
+        width: 50px;
+        height: 50px;
+        top: 15px;
+        right: 15px;
+    }
+}
